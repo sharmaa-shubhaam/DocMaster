@@ -41,7 +41,7 @@ function Document() {
     };
 
     useEffect(() => {
-        const fetchDoc = async () => {
+        (async function () {
             try {
                 const docref = (await getDoc(doc(db, `users/${user._id}/docs/${refDocid}`))).data();
                 setData({
@@ -52,8 +52,7 @@ function Document() {
                 console.log(error);
                 window.location.href = "/";
             }
-        };
-        fetchDoc();
+        })();
     }, []);
 
     return (
