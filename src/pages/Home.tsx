@@ -12,8 +12,8 @@ import { addDoc, collection, doc, getDocs, serverTimestamp, setDoc } from "fireb
 import { db } from "../Firebase";
 
 function Home() {
-    const user = useAppSelector(authState);
     const navigate = useNavigate();
+    const user = useAppSelector(authState);
     const [docId, setDocId] = useState<string[]>([]);
 
     const createDoc = async () => {
