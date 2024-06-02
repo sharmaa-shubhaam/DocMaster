@@ -35,7 +35,7 @@ function Home() {
     useEffect(() => {
         (async function () {
             try {
-                if (user.auth) return null;
+                if (!user.auth) return null;
                 await setDoc(doc(db, "users", user._id), {
                     username: user.username,
                     email: user.email,

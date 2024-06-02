@@ -12,6 +12,7 @@ function AuthProvider({ children }: { children: ReactNode }) {
         onAuthStateChanged(auth, (user) => {
             if (!user) {
                 setLoading(false);
+
                 return null;
             }
 
