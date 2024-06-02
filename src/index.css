@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+}
+
+:root {
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    background-color: rgb(255, 255, 255);
+    color: #212023;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --bg-gray: #f1f3f4;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@layer components {
+    .options {
+        @apply hover:bg-gray-200 cursor-pointer px-2 py-0.5 rounded;
+    }
+
+    .ribbon-options {
+        @apply text-lg hover:bg-gray-200 rounded flex items-center;
+    }
+}
